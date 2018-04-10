@@ -1,3 +1,3 @@
-FROM k8s.gcr.io/addon-resizer:1.7
+FROM quay.io/calico/node:v2.6.1
 MAINTAINER Aiwei Qin<aiwieqin@creditease.cn>
 
