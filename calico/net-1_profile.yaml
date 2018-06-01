@@ -1,0 +1,23 @@
+- apiVersion: v1
+  kind: profile
+  metadata:
+    name: net-1
+    tags:
+    - net-1
+  spec:
+    egress:
+    - action: allow
+      destination: {}
+      source: {}
+    ingress:
+    - action: allow
+      destination: {}
+      source:
+        tag: net-1
+    - action: allow
+      protocol: tcp
+      source:
+        tag: net-2
+      destination:
+        ports:
+        - 9990:9995

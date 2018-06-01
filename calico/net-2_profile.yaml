@@ -1,0 +1,21 @@
+- apiVersion: v1
+  kind: profile
+  metadata:
+    name: net-2
+    tags:
+    - net-2
+  spec:
+    egress:
+    - action: allow
+      destination: {}
+      source: {}
+    ingress:
+    - action: allow
+      destination: {}
+      source:
+        tag: net-2
+    - action: allow
+      destination: {}
+      source:
+        tag: net-1
+
