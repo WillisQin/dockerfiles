@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: traefik-ingress
+  namespace: default
+spec:
+  rules:
+  - host: web.creditease.corp
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: my-nginx
+          servicePort: 80
+  - host: traefik.frontend.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: frontend
+          servicePort: 80
+  - host: rolling-update-test.creditease.corp
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: rolling-update-test
+          servicePort: 9090
+  - host: scope.weave.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: weave-scope-app
+          servicePort: 80
