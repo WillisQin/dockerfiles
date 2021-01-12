@@ -1,3 +1,3 @@
-FROM gcr.io/kubernetes-helm/tiller:v2.13.1
+FROM surnet/alpine-wkhtmltopdf
 MAINTAINER Aiwei Qin<aiwieqin@creditease.cn>
 
